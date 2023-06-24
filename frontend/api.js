@@ -1,4 +1,4 @@
-const endpoint = "http://localhost/actvtyJune23/backend/";
+const endpoint = "http://localhost/kodegodb/api/";
 
 // Cookie Functions --------------------------------
 function getCookie(name) {
@@ -67,7 +67,7 @@ editForm.addEventListener("submit", updateProfile);
 // Post Functions
 function newPost() {
   const tweetsContent = document.querySelector("#newpost").value;
-  const dateTweeted = new Date().toISOString(); // Get the current date and time in ISO format
+  const dateTweeted = new Date().toISOString(); 
   fetch(endpoint + "createtweets.php", {
     method: "POST",
     headers: {
