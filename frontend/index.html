@@ -10,21 +10,21 @@
 </head>
 
 <body>
-  <section class="container m-5 p-5 border rounded">
-    <div class="row">
+  <section class="container">
+    <div class="row mt-5">
       <div class="col-md-3">
         <h1>TWEETTER</h1>
         <br><br>
         <strong>Welcome</strong>, <span id="name"></span>
+        <br>
+        <a href="changeprofile.html" class="text-secondary fs-6">Edit Profile/Password</a>
       </div>
       <div class="col-md-6">
-        <a href="changeprofile.html" class="ms-3 align-middle">Edit Profile/Password</a>
-
         <!-- Create New Post -->
-        <section class="rounded p-4 pb-5 mt-4 shadow">
+        <section class="rounded p-4 pb-5 shadow">
           <label for="newpost">What's your Tweet?</label>
           <input id="newpost" class="form-control" type="text">
-          <button id="newpost_btn" class="btn btn-primary btn-sm float-end mt-2">Tweet</button>
+          <button id="newpost_btn" class="btn btn-info btn-sm float-end mt-2">Tweet</button>
         </section>
 
         <!-- News Feed -->
@@ -33,7 +33,7 @@
 
       </div>
       <div class="col-md-3">
-        <button id="logout" class="btn btn-dark btn-sm float-end">⃪ Logout</button>
+        <button id="logout" class="btn btn-info btn-sm float-end">⃪ Logout</button>
       </div>
     </div>
   </section>

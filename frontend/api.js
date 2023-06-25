@@ -13,11 +13,6 @@ function getUser() {
     .then((data) => {
       document.querySelector("#name").innerHTML =
         data.user.firstname + " " + data.user.lastname;
-        document.querySelector("#emailInfo").innerHTML = 
-        data.user.email;
-        document.querySelector("#birthDateInfo").innerHTML = 
-        data.user.birthdate;
-
       console.log(data);
     });
 }
