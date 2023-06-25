@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
         echo json_encode($response);
     } else {
-        $response = array(
+        $response = array(   
             'success' => false,
             'message' => 'Failed to create post.'
         );
