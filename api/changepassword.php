@@ -20,11 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = $data['password'];
   $newPassword = $data['newPassword'];
 
-  // Perform password validation and change password logic here
-  // You can compare the entered password with the existing user password from the database
-
-  // Example validation: Check if the entered password matches the user's current password
-  $userId = 1; // Assuming the user ID is 1
+  $userId = 1; 
   $sql = "SELECT password FROM users WHERE id = $userId";
   $result = $conn->query($sql);
 

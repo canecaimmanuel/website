@@ -13,17 +13,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($conn->query($sql)) {
         $response = array(
             'success' => true,
-            'message' => 'Tweet deleted successfully.'
+            'message' => 'Tweet deleted.'
         );
-        
+
     } else {
         $response = array(
             'success' => false,
             'message' => 'Failed to delete tweet.'
         );
-       
-    }
 
+    }
     echo json_encode($response);
     
 } else {
