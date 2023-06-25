@@ -9,8 +9,8 @@ header('Access-Control-Allow-Headers: *');
 
 // Change this to your local settings
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin_imman";
+$password = "ipAaa4./K5Gk5u0x";
 $dbname = "kodego_db";
 
 // Make a connection

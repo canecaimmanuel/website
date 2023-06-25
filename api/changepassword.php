@@ -40,28 +40,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           'success' => true,
           'message' => 'Change password successful.'
         );
-        echo json_encode($response);
       } else {
         $response = array(
           'success' => false,
           'message' => 'Failed to update password.'
         );
-        echo json_encode($response);
       }
     } else {
       $response = array(
         'success' => false,
         'message' => 'Invalid current password.'
       );
-      echo json_encode($response);
     }
   } else {
     $response = array(
       'success' => false,
       'message' => 'User not found.'
     );
-    echo json_encode($response);
+
   }
+
+  header('Content-Type: application/json');
+  echo json_encode($response);
+
 } else {
   echo "Invalid request! Only POST requests are allowed.";
 }
