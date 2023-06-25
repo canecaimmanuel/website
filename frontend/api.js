@@ -1,4 +1,4 @@
-const endpoint = "http://localhost/actvtyJune23/backend/";
+const endpoint = "http://localhost/kodegodb/api/";
 
 // Cookie Functions --------------------------------
 function getCookie(name) {
@@ -15,7 +15,7 @@ function getUser() {
         data.user.firstname + " " + data.user.lastname;
         document.querySelector("#emailInfo").innerHTML = 
         data.user.email;
-        document.querySelector("#bdateInfo").innerHTML = 
+        document.querySelector("#birthDateInfo").innerHTML = 
         data.user.birthdate;
 
       console.log(data);
@@ -25,7 +25,7 @@ function getUser() {
 function checkSession() {
   const userIDCookie = getCookie("user_id");
   if (userIDCookie) {
-    window.location.replace("indexs.html");
+    window.location.replace("index.html");
   }
 }
 
@@ -67,7 +67,7 @@ editForm.addEventListener("submit", updateProfile);
 // Post Functions
 function newPost() {
   const tweetsContent = document.querySelector("#newpost").value;
-  const dateTweeted = new Date().toISOString(); // Get the current date and time in ISO format
+  const dateTweeted = new Date().toISOString(); 
   fetch(endpoint + "createtweets.php", {
     method: "POST",
     headers: {
