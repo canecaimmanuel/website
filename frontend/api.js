@@ -116,11 +116,11 @@ function getPosts() {
             <div class="card mt-4">
               <div class="card-body">
                 <div>
+                  <button class="btn btn-outline-danger float-end" onclick="deleteTweet(${tweets.user_id})">x</button>
                   <p class="fw-bold">${tweets.firstname} ${tweets.lastname}</p>
                   <p>${tweets.date_tweeted}</p>
                 </div>
                 <p>${tweets.content}</p>
-                <button class="btn btn-danger" onclick="deleteTweet(${tweets.user_id})">Delete</button>
               </div>
             </div>
             `;
