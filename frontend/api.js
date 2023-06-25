@@ -95,7 +95,7 @@ function deleteTweet(userId) {
   })
     .then((response) => response.json())
     .then((data) => {
-
+      alert(data.message);
       console.log(data);
       getPosts();
     });
