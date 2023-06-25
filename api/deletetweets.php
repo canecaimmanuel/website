@@ -15,16 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'success' => true,
             'message' => 'Tweet deleted.'
         );
-
+        echo json_encode($response);
     } else {
         $response = array(
             'success' => false,
             'message' => 'Failed to delete tweet.'
         );
-
+        echo json_encode($response);
     }
-    echo json_encode($response);
-    
 } else {
     echo "Invalid request! Only POST requests are allowed.";
 }

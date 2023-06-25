@@ -1,4 +1,4 @@
-const endpoint = "http://localhost/kodegodb/api";
+const endpoint = "http://localhost/actvtyJune23/backend/";
 
 // Cookie Functions --------------------------------
 function getCookie(name) {

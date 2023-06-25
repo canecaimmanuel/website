@@ -5,7 +5,7 @@ include "config.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);
 
-    // Check if the data array is not empty 
+    // Check if the data array is not null
     if (!is_null($data)) {
 
         $email = isset($data['email']) ? $data['email'] : '';
@@ -15,19 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $response = array(
                 'success' => true,
-                'message' => 'Your profile is updated.'
+                'message' => 'Profile updated.'
         );
-
+        echo json_encode($response);
     } else {
         $response = array(
             'success' => false,
-            'message' => 'Invalid Input.'
+            'message' => 'Please provide valid input.'
         );
- 
+        echo json_encode($response);
     }
-
-    echo json_encode($response);
-    
 } else {
     echo "Invalid request! Only POST requests are allowed.";
 }

@@ -11,14 +11,14 @@ if($results->num_rows > 0){
     $tweets = array();
 
     while($row = $results->fetch_assoc()){
-        $todo = array(
+        $tweet = array(
             'id' => $row['id'],
             'content' => $row['content'],
             'firstname' => $row['firstname'],
             'lastname' => $row['lastname'],
             'date_tweeted' => $row['date_tweeted'],
         );
-        $tweets[] = $todo;
+        $tweets[] = $tweet;
     }
 
     $json = json_encode($tweets);
